@@ -16,8 +16,7 @@ Timestamp begins from the defined value and incrementes by random number of seco
 
 Each line populated by random words from the english dictionary and randomly includes zero or several keywords.Number of words in a line vary from defined minumum and maximum values. 
 
-#### Notes: Each line does not necesarry contain a keyword and may contain several keywords. 	
-			First keyword in the keywords array will appear more frequently than others. 
+Notes: Each line does not necesarry contain a keyword and may contain several keywords. First keyword in the keywords array will appear more frequently than others. 
 
 
 ### Use 
@@ -39,7 +38,7 @@ Path to the file --file, words array --keywords and number of lines --lines are 
 
 If --time is not specified it is set to a current time. 
  
-##### Note: Dictionary file is located in the /dict folder and is a Linux dictionary file. 
+Note: Dictionary file is located in the /dict folder and is a Linux dictionary file. 
 
 #### Examples of usage:
 
@@ -51,7 +50,7 @@ If --time is not specified it is set to a current time.
 Analysing occurencies of keywords in the log file. Reads each line, store keywords if found and writes this line to the output file. 
 It is possible to save intermidiate results to the txt files.
 
-#### Note: generated with 6 keywords test logs of 1 000, 10 000, 100 000 and 1 000 000 lines are located in the /logs folder
+Note: generated with 6 keywords test logs of 1 000, 10 000, 100 000 and 1 000 000 lines are located in the /logs folder
 
 ### Use 
 
@@ -80,25 +79,18 @@ If ---start and --finish time points are not specified, they are taken from the 
 
 If -g flag is given, script calculates also frequency of each keyword appearance over time. Time interval is binned to smaller intervals of --delta length and number of keyword occurences in each interval is calculated.
 
-#### Note: All output files are written to the /results folder.
+Note: All output files are written to the /results folder.
 
 #### Examples of usage:
 
 	./search_log.rb --log="logs/test_log.txt" --keywords="ERROR, LoggedOut" --start="10.11.2014" -n
 	./create_log.rb --log="logs/test_log.txt" --keywords="ERROR, LoggedOut, timedelay, login" -w
 
-## Require
+## Requirements
 
-Required : 'rake' , 'gnuplot'
+Required : 'rake' , 'gnuplot' 
 
 This tool require to install 'gnuplot' library (https://github.com/rdp/ruby_gnuplot) to create graph figures.
-
-### How to install GnuPlot on Linux
-
-------
-	$ sudo apt-get install gnuplot
-	$ sudo apt-get install gnuplot-x11
-------
 
 
 ## Tests
